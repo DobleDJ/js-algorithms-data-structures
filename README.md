@@ -1,5 +1,7 @@
 # JavaScript Algorithms and Data Structures (Beta) freeCodeCamp Certification
 
+![Javascript freeCodeCamp Certification](https://raw.githubusercontent.com/DobleDJ/js-algorithms-data-structures/refs/heads/main/assets/images/Js%20certificado.png)
+
 Developers use HTML and CSS to control the content and styling of a page. And they use JavaScript to make that page interactive.
 
 In this JavaScript Algorithm and Data Structures Certification, you'll learn the JavaScript fundamentals like variables, arrays, objects, loops, functions, the DOM and more.
