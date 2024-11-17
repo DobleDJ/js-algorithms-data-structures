@@ -34,6 +34,30 @@ When you have that working, modify your program to print "FizzBuzz" for numbers 
 
 */
 
+//Version I
+for (let index = 1; index <= 100; index++) {
+  if (index % 3 === 0) {
+    console.log("Fizz")
+  } else if (index % 5 === 0) {
+    console.log("Buzz")
+  } else {
+    console.log(index)
+  }
+}
+
+//Version II
+for (let index = 1; index <= 100; index++) {
+  if (index % 3 === 0 && index % 5 === 0) {
+    console.log("FizzBuzz")
+  } else if (index % 3 === 0) {
+    console.log("Fizz")
+  } else if (index % 5 === 0) {
+    console.log("Buzz")
+  } else {
+    console.log(index)
+  }
+}
+
 /*
 3- Chessboard
 Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
