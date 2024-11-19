@@ -75,5 +75,81 @@ Passing this string to console.log should show something like this:
 
 When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 */
+
 let row = 8
 let column = 8
+
+/**
+ *
+ * @param {number} row length of the row
+ * @returns string tuple blank space and number
+ */
+let rowBlank = (row) => {
+  let emptyStr = ""
+  for (let index = 0; index < row; index++) {
+    if (emptyStr.length === 0) {
+      //empty string
+      emptyStr += " "
+    } else if (emptyStr[index - 1] === " ") {
+      emptyStr += "#"
+    } else {
+      emptyStr += " "
+    }
+  }
+  return emptyStr
+}
+
+console.log(rowBlank(8))
+
+/**
+ *
+ * @param {number} row length of the row
+ * @returns string tuple number and blank space
+ */
+let rowNumber = (row) => {
+  let emptyStr = ""
+  for (let index = 0; index < row; index++) {
+    if (emptyStr.length === 0) {
+      //empty string
+      emptyStr += "#"
+    } else if (emptyStr[index - 1] === "#") {
+      emptyStr += " "
+    } else {
+      emptyStr += "#"
+    }
+  }
+  return emptyStr
+}
+
+console.log(rowNumber(8))
+
+/**
+ *
+ * @param {number} row
+ * @param {number} column
+ * @returns chess board 8x8
+ */
+let boardChess = (row, column) => {
+  let chessBoard = ""
+  for (let index = 0; index < column; index++) {
+    if (chessBoard.length === 0) {
+      //empty String
+      chessBoard += rowBlank(row)
+      chessBoard += "\n" //new line
+      console.log("Inicio str vacio")
+    } else if (chessBoard[chessBoard.length - 2] === "#") {
+      chessBoard += rowNumber(row)
+      chessBoard += "\n" //new line
+      console.log(index)
+      console.log("Pinto numero y espacio")
+    } else {
+      chessBoard += rowBlank(row)
+      chessBoard += "\n" //new line
+      console.log(index)
+      console.log("Pinto space y number")
+    }
+  }
+  return chessBoard
+}
+
+console.log(boardChess(8, 8))
