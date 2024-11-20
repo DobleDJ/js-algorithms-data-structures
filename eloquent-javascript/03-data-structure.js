@@ -5,14 +5,14 @@ Program Data Structure Excersices
 */
 
 /**
- * Escribe una función range que tome dos argumentos, inicio y fin, y devuelva un array
+ * 1- Escribe una función range que tome dos argumentos, inicio y fin, y devuelva un array
  * que contenga todos los números desde inicio hasta fin, incluyendo fin.
  */
 /**
  *
  * @param {number} inicio initial value of array
  * @param {number} fin final value of array
- * @returns Array from start to end arg
+ * @returns Returns an array from start to end arg
  */
 let rangeNumber = (inicio, fin) => {
   let rangeArray = []
@@ -35,3 +35,22 @@ try {
 } catch (error) {
   console.error(error.message)
 }
+
+/*
+2- Escribe una función sum que tome un array de números y devuelva la
+suma de estos números.
+*/
+/**
+ *
+ * @param {array} array
+ * @returns Returns the sum of all numbers in the array
+ */
+let sum = (array) => {
+  let sumNumbers = 0
+  for (let element of array) {
+    sumNumbers += element
+  }
+  return sumNumbers
+}
+
+console.log(sum(rangeNumber(1, 10)))
