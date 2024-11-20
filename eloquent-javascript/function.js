@@ -64,4 +64,44 @@ y devuelva un número que indique cuántos caracteres B en mayúscula hay en
 la cadena.
  */
 
-function contarBs(cadena) {}
+/**
+ *
+ * @param {String} cadena Any string
+ * @returns Returns the count of character B in the string
+ */
+function contarBs(cadena) {
+  //String to work
+  let mychain = cadena
+  let totalB = 0
+  for (let index = 0; index < mychain.length; index++) {
+    if (mychain[index] === "B") {
+      totalB++
+    }
+  }
+  return totalB
+}
+
+let txt = "Buenas noches desde un lugar de la tierra. Blank space. English words: beautiful, baseball, bank, ball"
+console.log(`The count of B in the text: \n${txt} \n Count of B: ${contarBs(txt)}`)
+
+// Version II
+
+/**
+ *
+ * @param {String} cadena any string value
+ * @param {*} caracter A character to search in cadena
+ * @returns Return amount of caracter in cadena
+ */
+let contarCaracter = (cadena, caracter) => {
+  let cadenaBackup = cadena
+  let countChar = 0
+  for (let index = 0; index < cadenaBackup.length; index++) {
+    if (cadenaBackup[index] === caracter) {
+      countChar++
+    }
+  }
+  return countChar
+}
+
+let aChar = "a"
+console.log(`The count of (${aChar}) in the text: \n${txt} \n Count of ${aChar}: ${contarCaracter(txt, aChar)}`)
