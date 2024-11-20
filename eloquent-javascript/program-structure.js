@@ -17,7 +17,7 @@ Write a loop that makes seven calls to console.log to output the following trian
 #######
 */
 
-const characterNumber = "#"
+let characterNumber = "#"
 let triangle = ""
 for (let index = 0; index < 7; index++) {
   triangle += characterNumber
@@ -72,12 +72,11 @@ Passing this string to console.log should show something like this:
 # # # # 
  # # # #
 # # # #
-
-When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 */
 
-let row = 8
+/*let row = 8
 let column = 8
+*/
 
 /**
  *
@@ -153,3 +152,36 @@ let boardChess = (row, column) => {
 }
 
 console.log(boardChess(8, 8))
+
+/*
+When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+*/
+
+/**
+ *
+ * @param {number} width
+ * @param {number} height
+ * @returns chess board any size
+ */
+let boardChess2 = (width, height) => {
+  let chessBoard = ""
+  for (let index = 0; index < height; index++) {
+    if (chessBoard.length === 0) {
+      //empty String
+      chessBoard += rowBlank(width)
+      console.log("Inicio str vacio")
+    } else if (index % 2 === 1) {
+      //Impar row
+      console.log("Debe se impar 1", index % 2)
+      chessBoard += "\n"
+      chessBoard += rowNumber(width) // Structure _#
+    } else {
+      chessBoard += "\n"
+      chessBoard += rowBlank(width) //Structure #_
+      console.log(index)
+    }
+  }
+  return chessBoard
+}
+
+console.log(boardChess2(9, 4))
