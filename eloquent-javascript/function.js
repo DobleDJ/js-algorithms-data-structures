@@ -26,7 +26,7 @@ let testMin = minimun(value1, value2)
 console.log(`The minimun number between ${value1} and ${value2} is:\n ${testMin}`)
 
 /*
-Define una función recursiva isEven que corresponda a esta descripción. La
+2- Define una función recursiva isEven que corresponda a esta descripción. La
 función debe aceptar un solo parámetro (un número entero positivo) y devolver
 un booleano.
 */
@@ -57,3 +57,11 @@ try {
 } catch (error) {
   console.error(error.message)
 }
+
+/**
+ 3- Escribe una función contarBs que tome una cadena como único argumento
+y devuelva un número que indique cuántos caracteres B en mayúscula hay en
+la cadena.
+ */
+
+function contarBs(cadena) {}
