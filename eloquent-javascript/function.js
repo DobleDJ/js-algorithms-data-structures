@@ -24,3 +24,36 @@ let minimun = (number1, number2) => {
 let testMin = minimun(value1, value2)
 
 console.log(`The minimun number between ${value1} and ${value2} is:\n ${testMin}`)
+
+/*
+Define una función recursiva isEven que corresponda a esta descripción. La
+función debe aceptar un solo parámetro (un número entero positivo) y devolver
+un booleano.
+*/
+
+let valueTry = 3
+
+/**
+ *
+ * @param {number} value Integer positive
+ * @returns Return true o false if the value is par
+ */
+let isEven = (value) => {
+  if (value === 0) return true
+  if (value === 1) return false
+  if (value < 0) {
+    throw new Error("Invalid number insert only integer positive")
+  } else {
+    return isEven(value - 2)
+  }
+}
+
+try {
+  if (isEven(valueTry) === true) {
+    console.log("The value is par")
+  } else {
+    console.log("The value is impar")
+  }
+} catch (error) {
+  console.error(error.message)
+}
