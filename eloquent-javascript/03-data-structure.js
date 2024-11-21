@@ -91,7 +91,28 @@ let rangeNumber2 = (inicio, fin, paso = 1) => {
 }
 
 try {
-  console.log(rangeNumber2(5, 2, -1))
+  console.log(rangeNumber2(0, 20, 2))
 } catch (error) {
   console.error(error.message)
 }
+
+/**
+ * 4- escribe dos funciones, reverseArray y reverseArrayInPlace. La primera, reverseArray, debería tomar un array como 
+ * argumento y producir un nuevo array que tenga los mismos elementos en orden inverso. La segunda, reverseArrayInPlace, debería
+hacer lo que hace el método reverse: modificar el array dado como argumento invirtiendo sus elementos. 
+ */
+
+/**
+ *
+ * @param {Array} array Any array
+ * @returns Returns a new array with inversed elements
+ */
+let reverseArray = (array) => {
+  let arrayFinal = []
+  for (let index = array.length - 1; index >= 0; index--) {
+    arrayFinal.push(array[index])
+  }
+  return arrayFinal
+}
+
+console.log(reverseArray(rangeNumber2(0, 20, 2)))
