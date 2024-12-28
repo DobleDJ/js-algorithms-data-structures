@@ -33,21 +33,50 @@ console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]))
  * Complete the getGrade function that takes a number score as a parameter.
  * Your function should return a string representing a letter grade based on the score.
  *
- * 100	"A++"
+ * 100	    "A++"
  * 90 - 99	"A"
  * 80 - 89	"B"
  * 70 - 79	"C"
  * 60 - 69	"D"
- * 0 - 59	"F"
- * /
+ * 0 - 59	  "F"
+ */
+const letterAPlus = "A++"
+const letterA = "A"
+const letterB = "B"
+const letterC = "C"
+const letterD = "D"
+const letterF = "F"
 
 /**
- * converting the student score to a letter grade.
- * @param {Array} score An array of student's test scores
+ * Format letter grade
+ * @param {number} scoreStudent Student score
+ * @param {string} letter Letter grade
  * @returns
+ */
+let letterGrade = (scoreStudent, letter) => {
+  return `Student score: ${scoreStudent} Letter grade: ${letter}\n`
+}
+
+/**
+ * Converting the student score to a letter grade.
+ * @param {number} score An score of student's test
+ * @returns Return a sttring converting the student score to a letter grade
  */
 function getGrade(score) {
   let result = ""
+  if (score === 100) {
+    result += letterGrade(score, letterAPlus)
+  } else if (score >= 90 && score <= 99) {
+    result += letterGrade(score, letterA)
+  } else if (score >= 80 && score <= 89) {
+    result += letterGrade(score, letterB)
+  } else if (score >= 70 && score <= 79) {
+    result += letterGrade(score, letterC)
+  } else if (score >= 60 && score <= 69) {
+    result += letterGrade(score, letterD)
+  } else {
+    result += letterGrade(score, letterF)
+  }
   return result
 }
 
