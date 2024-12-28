@@ -60,7 +60,7 @@ let letterGrade = (scoreStudent, letter) => {
 /**
  * Converting the student score to a letter grade.
  * @param {number} score An score of student's test
- * @returns Return a sttring converting the student score to a letter grade
+ * @returns Return a string converting the student score to a letter grade
  */
 function getGrade(score) {
   let result = ""
@@ -83,3 +83,41 @@ function getGrade(score) {
 console.log(getGrade(96))
 console.log(getGrade(82))
 console.log(getGrade(56))
+
+function getGradeII(score) {
+  if (score === 100) {
+    return "A++"
+  } else if (score >= 90) {
+    return "A"
+  } else if (score >= 80) {
+    return "B"
+  } else if (score >= 70) {
+    return "C"
+  } else if (score >= 60) {
+    return "D"
+  } else {
+    return "F"
+  }
+}
+
+/**
+ * Task 3
+ * The teacher is really happy with the program you have created so far.
+ * But now they want to have an easy way to check if a student has a passing grade.
+ * A passing grade is anything that is not an "F".
+ * Complete the function hasPassingGrade that takes a student score as a parameter.
+ * Your function should return true if the student has a passing grade and false if they do not.
+ */
+
+/**
+ * Check if a student has a passing grade
+ * @param {number} score Student's score
+ * @returns Return true if the student has a passing grade and false if they do not
+ */
+function hasPassingGrade(score) {
+  return getGradeII(score) === "F" ? false : true
+}
+
+console.log(hasPassingGrade(100))
+console.log(hasPassingGrade(53))
+console.log(hasPassingGrade(87))
