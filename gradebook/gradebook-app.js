@@ -27,3 +27,30 @@ function getAverage(scores) {
 
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]))
 console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]))
+
+/**Task 2
+ * Now the teacher needs your help converting the student score to a letter grade.
+ * Complete the getGrade function that takes a number score as a parameter.
+ * Your function should return a string representing a letter grade based on the score.
+ *
+ * 100	"A++"
+ * 90 - 99	"A"
+ * 80 - 89	"B"
+ * 70 - 79	"C"
+ * 60 - 69	"D"
+ * 0 - 59	"F"
+ * /
+
+/**
+ * converting the student score to a letter grade.
+ * @param {Array} score An array of student's test scores
+ * @returns
+ */
+function getGrade(score) {
+  let result = ""
+  return result
+}
+
+console.log(getGrade(96))
+console.log(getGrade(82))
+console.log(getGrade(56))
