@@ -71,22 +71,37 @@ function update(location) {
     text.innerText = location.text
 }
 
+/**
+ * Retorna al player a la Ciudad
+ */
 function goTown() {
     update(locations[0])
 }
 
+/**
+ * Retorna al player a la Tienda
+ */
 function goStore() {
     update(locations[1])
 }
 
+/**
+ * Retorna al player a la Cueva.
+ */
 function goCave() {
     update(locations[2])
 }
 
+/**
+ * Player vs Dragon
+ */
 function fightDragon() {
     console.log("Fighting dragon.")
 }
 
+/**
+ * Comprar salud por 10 de oro
+ */
 function buyHealth() {
     if (gold >= 10) {
         gold -= 10
@@ -99,17 +114,33 @@ function buyHealth() {
     }
 }
 
+/**
+ * Comprar arma por 30 de oro
+ */
 function buyWeapon() {
-    if (gold >= 30) {
-        gold -= 30
-        currentWeaponIndex++
-        goldText.innerText = gold
-        let newWeapon = weapons[currentWeaponIndex].name
-        text.innerText = `You now have a ${newWeapon} new weapon.`
+    if (currentWeaponIndex < weapons.length - 1) {
+        if (gold >= 30) {
+            gold -= 30
+            currentWeaponIndex++
+            goldText.innerText = gold
+            let newWeapon = weapons[currentWeaponIndex].name
+            text.innerText = `You now have a ${newWeapon}.`
+            inventory.push(newWeapon)
+            text.innerText += " In your inventory you have: " + inventory
+        } else {
+            text.innerText = "You do not have enough gold to buy a weapon."
+        }
     } else {
-        text.innerText = "You do not have enough gold to buy a weapon."
+        text.innerText = "You already have the most powerful weapon!"
+        button2.innerText = "Sell weapon for 15 gold"
+        button2.onclick = sellWeapon
     }
 }
+
+/**
+ * Vender las armas viejas por 15 de oro
+ */
+function sellWeapon() {}
 
 function fightSlime() {}
 
