@@ -1,0 +1,75 @@
+:root {
+  --main-background: #0a0a23;
+  --color-white: #ffffff;
+  --color-red: #c70d0d;
+  --btn-bg-color: #feac32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#text {
+  background-color: var(--main-background);
+  color: var(--color-white);
+  padding: 10px;
+}
+
+#game {
+  max-width: 60dvw;
+  max-height: 400px;
+  background-color: var(--color-white);
+  color: var(--color-white);
+  margin: 30px auto 0px;
+  padding: 10px;
+}
+
+#controls {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 5px 5px;
+}
+
+#controls,
+#stats {
+  border: 1px solid #0a0a23;
+  color: var(--main-background);
+  padding: 5px;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+}
+
+button {
+  cursor: pointer;
+  color: var(--main-background);
+  background-color: var(--btn-bg-color);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.stat {
+  padding-right: 10px;
+}
