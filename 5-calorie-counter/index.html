@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calorie Counter" />
+    <meta name="author" content="freeCodeCamp - Yoandy Doble Herrera" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/icons/icon.png" sizes="64x64" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Calorie Counter</title>
 </head>
@@ -48,9 +52,15 @@
                         <button type="button" id="add-entry">Add Entry</button>
                     </span>
                 </div>
+                <div class="">
+                    <button type="submit">Calculate Remaining Calories</button>
+                    <button id="clear" type="button">Clear</button>
+                </div>
+                <div id="output" class="output hide"></div>
             </form>
         </div>
     </main>
+    <script src="modules/script.js"></script>
 </body>
 
 </html>
